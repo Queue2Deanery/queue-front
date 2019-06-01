@@ -1,13 +1,13 @@
 import React from 'react';
-import QueuesList from "./QueuesList";
 import StudentAppBar from "./AppBar";
 
-const WelcomeRoute = () => {
+function SignupQueue() {
     return (
         <React.Fragment>
             <StudentAppBar/>
-            <QueuesList/>
+            <h2> Hello there </h2>
         </React.Fragment>
     );
-};
-export default WelcomeRoute;
+}
+
+export default SignupQueue

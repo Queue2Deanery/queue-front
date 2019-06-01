@@ -32,7 +32,7 @@ function StudentAppBar() {
                     <Typography variant="h6" className={classes.title}>
                         Kolejka do dziekanatu
                     </Typography>
-                    <Button component={ Link } to="/singin" variant="contained" color="primary">
+                    <Button component={ Link } to="/stud/singin" variant="contained" color="primary">
                         Zaloguj
                     </Button>
                 </Toolbar>
