@@ -1,14 +1,13 @@
 import React from 'react';
-import Dashboard from "./Dashboard";
+import QueuesList from "./QueuesList";
 import StudentAppBar from "./AppBar";
 
-const DashboardRoute = () => {
+const WelcomeRoute = () => {
     return (
         <React.Fragment>
             <StudentAppBar/>
-            <Dashboard/>
+            <QueuesList/>
         </React.Fragment>
     );
 };
-
-export default DashboardRoute;
+export default WelcomeRoute;

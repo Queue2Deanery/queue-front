@@ -3,8 +3,9 @@ import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import StudentAppBar from "./AppBar";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -31,49 +32,54 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function SignIn() {
+function SignIn() {
     const classes = useStyles();
 
     return (
-        <Container component="main" maxWidth="xs">
-            <CssBaseline />
-            <div className={classes.paper}>
-                <Typography component="h1" variant="h5">
-                    Zaloguj się do systemu
-                </Typography>
-                <form className={classes.form} noValidate>
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        id="login"
-                        label="Login"
-                        name="login"
-                        autoComplete="login"
-                        autoFocus
-                     />
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        name="password"
-                        label="Hasło"
-                        type="password"
-                        id="password"
-                    />
-                    <Button
-                        type="submit"
-                        fullWidth
-                        variant="contained"
-                        color="primary"
-                        className={classes.submit}
-                    >
-                        Zaloguj
-                    </Button>
-                </form>
-            </div>
-        </Container>
+        <React.Fragment>
+            <StudentAppBar/>
+            <Container component="main" maxWidth="xs">
+                <CssBaseline/>
+                <div className={classes.paper}>
+                    <Typography component="h1" variant="h5">
+                        Zaloguj się do systemu
+                    </Typography>
+                    <form className={classes.form} noValidate>
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            id="login"
+                            label="Login"
+                            name="login"
+                            autoComplete="login"
+                            autoFocus
+                        />
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            name="password"
+                            label="Hasło"
+                            type="password"
+                            id="password"
+                        />
+                        <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            color="primary"
+                            className={classes.submit}
+                        >
+                            Zaloguj
+                        </Button>
+                    </form>
+                </div>
+            </Container>
+        </React.Fragment>
     );
 }
+
+export default SignIn

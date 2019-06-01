@@ -1,21 +1,18 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import SingInRoute from "./components/SingInRoute";
 import DashboardRoute from "./components/DashboardRoute";
-import StudentAppBar from "./components/AppBar";
+import WelcomeRoute from "./components/WelcomeRoute";
 
 function App() {
-  return (
-      <Router>
-        <div className="container">
-          <StudentAppBar/>
-          <Route exact path="/singin" component={SingInRoute} />
-          <Route exact path="/dashboard" component={DashboardRoute} />
-
-        </div>
-      </Router>
-  );
+    return (
+        <Router>
+            <Route exact path="/singin" component={SingInRoute}/>
+            <Route exact path="/welcome" component={WelcomeRoute}/>
+            <Route exact path="/dashboard" component={DashboardRoute}/>
+        </Router>
+    );
 }
 
 export default App;
