@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import StudentAppBar from "./AppBar";
+import AppBar from "./AppBar";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -37,7 +37,7 @@ function SignIn() {
 
     return (
         <React.Fragment>
-            <StudentAppBar/>
+            <AppBar/>
             <Container component="main" maxWidth="xs">
                 <CssBaseline/>
                 <div className={classes.paper}>

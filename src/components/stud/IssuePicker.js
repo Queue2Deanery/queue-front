@@ -5,7 +5,6 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 
 
-
 class IssuePicker extends React.Component {
     constructor(props) {
         super(props);
@@ -18,7 +17,7 @@ class IssuePicker extends React.Component {
 
     render() {
         return (
-            <FormControl style={{"min-width":"90%"}}>
+            <FormControl style={{"min-width": "90%"}}>
                 <InputLabel htmlFor="age-simple">Wybierz typ sprawy</InputLabel>
                 <Select
                     value={this.state.caseId}
