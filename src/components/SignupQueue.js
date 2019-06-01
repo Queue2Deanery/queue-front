@@ -9,6 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import IssuePicker from "./IssuePicker";
+import "./styles.css";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -44,26 +45,26 @@ function SignupQueue() {
                         className={classes.cardHeader}
                     />
                     <CardContent>
-                        <Grid container>
-                            <Grid item xs={3}>
+                        <Grid container className={'singupqueue'}>
+                            <Grid item xs={12} sm={3}>
                                 Typ sprawy:
                             </Grid>
-                            <Grid item xs={9}>
+                            <Grid item xs={12} sm={9}>
                                 <IssuePicker/>
                             </Grid>
                         </Grid>
-                        <Grid container>
-                            <Grid item xs={3}>
+                        <Grid container  className={'singupqueue'}>
+                            <Grid item xs={12} sm={3}>
                                 Czas oczekiwania:
                             </Grid>
-                            <Grid item xs={9}>
-                                <h3>Placeholder2</h3>
+                            <Grid item xs={12} sm={9}>
+                                <h3>133min</h3>
                             </Grid>
                         </Grid>
                     </CardContent>
                     <CardActions>
                         <Grid container justify={"center"}>
-                            <Button>Zapisz do kolejki</Button>
+                            <Button color={"primary"}>Zapisz do kolejki</Button>
                         </Grid>
                     </CardActions>
                 </Card>

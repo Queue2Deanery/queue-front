@@ -3,19 +3,13 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
-import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 
-const stylesm = createMuiTheme({
-    formControl: {
-        minWidth: 120,
-    }
-});
+
 
 class IssuePicker extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {caseId: 0};
+        this.state = {caseId: 1};
     }
 
     handleChange(event) {
@@ -24,8 +18,7 @@ class IssuePicker extends React.Component {
 
     render() {
         return (
-            <MuiThemeProvider theme={stylesm}>
-            <FormControl>
+            <FormControl style={{"min-width":"90%"}}>
                 <InputLabel htmlFor="age-simple">Wybierz typ sprawy</InputLabel>
                 <Select
                     value={this.state.caseId}
@@ -37,7 +30,6 @@ class IssuePicker extends React.Component {
                     <MenuItem value={4}>Inna sprawa</MenuItem>
                 </Select>
             </FormControl>
-            </MuiThemeProvider>
         );
     };
 }
