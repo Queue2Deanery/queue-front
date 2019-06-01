@@ -17,13 +17,7 @@ const useStyles = makeStyles(theme => ({
     },
     cardHeader: {
         backgroundColor: theme.palette.grey[200],
-    },
-    cardPricing: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'baseline',
-        marginBottom: theme.spacing(2),
-    },
+    }
 }));
 
 
@@ -42,7 +36,7 @@ function QueueItem() {
                 title={tier.title}
                 subheader={tier.subheader}
                 titleTypographyProps={{align: 'center'}}
-                subheaderTypographyProps={{align: 'center'}}
+                // subheaderTypographyProps={{align: 'center'}}
                 className={classes.cardHeader}
             />
             <CardContent>
