@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import AppBar from "./AppBar";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -66,15 +67,8 @@ function SignIn() {
                             type="password"
                             id="password"
                         />
-                        <Button
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            color="primary"
-                            className={classes.submit}
-                        >
-                            Zaloguj
-                        </Button>
+                        <Button fullWidth variant="contained" color="primary" className={classes.submit}
+                                component={Link} to="/stud/dashboard"> Zaloguj </Button>
                     </form>
                 </div>
             </Container>

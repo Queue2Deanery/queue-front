@@ -10,7 +10,7 @@ function SelectQueue() {
             <Container maxWidth="lg" className={"listTitleContainer"}>
                 <h3>Twoje kolejki:</h3>
             </Container>
-            <QueuesList/>
+            <QueuesList userType={"prac"}/>
         </React.Fragment>
 
     );

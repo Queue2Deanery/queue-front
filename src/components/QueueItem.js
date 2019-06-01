@@ -8,6 +8,10 @@ import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import TableHead from "@material-ui/core/TableHead";
+import {CardActions} from "@material-ui/core";
+import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -27,7 +31,7 @@ const tier =
         queueList: ['3min', '7min', '8min', '8min']
     };
 
-function QueueItem() {
+function QueueItem(props) {
     const classes = useStyles();
 
     return (
@@ -56,7 +60,7 @@ function QueueItem() {
                     <TableBody>
                         {tier.queueList.map((line, index) => (
                             <TableRow key={line}>
-                                <TableCell>{index}</TableCell>
+                                <TableCell>{index + 1}</TableCell>
                                 <TableCell>{123456}</TableCell>
                                 <TableCell>{line}</TableCell>
                             </TableRow>
@@ -64,6 +68,17 @@ function QueueItem() {
                     </TableBody>
                 </Table>
             </CardContent>
+            <CardActions>
+                <Grid container justify={"center"}>
+                    {(props.userType === "prac") ?
+                        < Button component={Link} to="/prac/panel"
+                                 color={"primary"} variant={"contained"}>Wybierz</Button>
+                        :
+                        <Button component={Link} to="/stud/signupqueue"
+                                color={"primary"} variant={"contained"}>Zapisz się</Button>
+                    }
+                </Grid>
+            </CardActions>
         </Card>
     );
 }

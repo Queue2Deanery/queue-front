@@ -10,6 +10,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import IssuePicker from "./IssuePicker";
 import "../styles.css";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -62,7 +63,8 @@ function SignupQueue() {
                     </CardContent>
                     <CardActions>
                         <Grid container justify={"center"}>
-                            <Button color={"primary"}>Zapisz do kolejki</Button>
+                            <Button component={Link} to="/stud/dashboard" color={"primary"} variant={"contained"}>Zapisz
+                                do kolejki</Button>
                         </Grid>
                     </CardActions>
                 </Card>

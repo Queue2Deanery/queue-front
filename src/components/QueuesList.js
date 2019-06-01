@@ -4,21 +4,21 @@ import QueueItem from "./QueueItem";
 import Container from "@material-ui/core/Container";
 import "./styles.css";
 
-function QueuesList() {
+function QueuesList(props) {
     return (
         <Container maxWidth="lg" component="main">
             <Grid container spacing={10} alignItems={"center"} justify={"space-evenly"}>
                 <Grid item xs={12} md={6} lg={4}>
-                    <QueueItem/>
+                    <QueueItem userType={props.userType}/>
                 </Grid>
                 <Grid item xs={12} md={6} lg={4}>
-                    <QueueItem/>
+                    <QueueItem userType={props.userType}/>
                 </Grid>
                 <Grid item xs={12} md={6} lg={4}>
-                    <QueueItem/>
+                    <QueueItem userType={props.userType}/>
                 </Grid>
                 <Grid item xs={12} md={6} lg={4}>
-                    <QueueItem/>
+                    <QueueItem userType={props.userType}/>
                 </Grid>
             </Grid>
         </Container>

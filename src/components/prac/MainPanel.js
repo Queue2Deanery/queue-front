@@ -12,12 +12,12 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import {Paper} from "@material-ui/core";
 
 const paperStyle = {
-  "padding":"15px",
+    "padding": "15px",
 };
 
 const nextButtonStyle = {
-    "padding":"30px",
-    "min-width":"100%",
+    "padding": "30px",
+    "min-width": "100%",
 };
 
 const useStyles = makeStyles(theme => ({
@@ -61,27 +61,27 @@ function UserData() {
 function QueueControl() {
     return (
         <Paper style={paperStyle}>
-        <Grid container spacing={3}>
-            <Grid item xs={12} sm={6}>
-                Liczba oczekujących:
+            <Grid container spacing={3}>
+                <Grid item xs={12} sm={6}>
+                    Liczba oczekujących:
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    11
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    Łączny czas
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    43 min
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Button>Wstrzymaj</Button>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Button>Zatrzymaj zapisy</Button>
+                </Grid>
             </Grid>
-            <Grid item xs={12} sm={6}>
-                11
-            </Grid>
-            <Grid item xs={12} sm={6}>
-                Łączny czas
-            </Grid>
-            <Grid item xs={12} sm={6}>
-                43 min
-            </Grid>
-            <Grid item xs={12} sm={6}>
-                <Button>Wstrzymaj</Button>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-                <Button>Zatrzymaj zapisy</Button>
-            </Grid>
-        </Grid>
-    </Paper>);
+        </Paper>);
 }
 
 function QueueTable() {
@@ -106,7 +106,7 @@ function QueueTable() {
                 <TableBody>
                     {tier.queueList.map((line, index) => (
                         <TableRow key={index}>
-                            <TableCell>{index}</TableCell>
+                            <TableCell>{index + 1}</TableCell>
                             <TableCell>{123456}</TableCell>
                             <TableCell>{line}</TableCell>
                             <TableCell>Lorem ipsum w kuri tiknu i fsjdu adko. kosla</TableCell>
@@ -130,7 +130,7 @@ function MainPanel() {
                         <UserData/>
                     </Grid>
                     <Grid item xs={12} sm={8}>
-                       <QueueControl/>
+                        <QueueControl/>
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <Grid container spacing={3}>
@@ -138,12 +138,13 @@ function MainPanel() {
                                 <Button color="primary" variant="contained">Poprzedni</Button>
                             </Grid>
                             <Grid item xs={12}>
-                                <Button color="primary" variant="contained" size={"large"} style={nextButtonStyle}>Następny</Button>
+                                <Button color="primary" variant="contained" size={"large"}
+                                        style={nextButtonStyle}>Następny</Button>
                             </Grid>
                         </Grid>
                     </Grid>
                     <Grid item xs={12}>
-                       <QueueTable/>
+                        <QueueTable/>
                     </Grid>
                 </Grid>
             </Container>
