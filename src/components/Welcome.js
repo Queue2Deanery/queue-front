@@ -1,7 +1,8 @@
 import React from 'react';
 import AppBar from "./AppBar";
-import QueuesList from "./QueuesList";
+import QueuesContainer from "./QueuesContainer";
 import Container from "@material-ui/core/Container";
+import {queuesSample} from "./mockData"
 
 function Welcome() {
     return (
@@ -10,7 +11,7 @@ function Welcome() {
             <Container maxWidth="lg" className={"listTitleContainer"}>
                 <h3>Aktywne kolejki do dziekanatu:</h3>
             </Container>
-            <QueuesList/>
+            <QueuesContainer queues={queuesSample.queues}/>
         </React.Fragment>
     );
 }

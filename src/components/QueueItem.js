@@ -24,23 +24,14 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-
-const tier =
-    {
-        title: 'Informatyka',
-        queueList: ['3min', '7min', '8min', '8min']
-    };
-
 function QueueItem(props) {
     const classes = useStyles();
 
     return (
         <Card>
             <CardHeader
-                title={tier.title}
-                subheader={tier.subheader}
+                title={props.queue.title}
                 titleTypographyProps={{align: 'center'}}
-                // subheaderTypographyProps={{align: 'center'}}
                 className={classes.cardHeader}
             />
             <CardContent>
@@ -58,11 +49,12 @@ function QueueItem(props) {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {tier.queueList.map((line, index) => (
-                            <TableRow key={line}>
+                        {props.queue.people.map((person, index) => (
+                            <TableRow key={index}>
                                 <TableCell>{index + 1}</TableCell>
-                                <TableCell>{123456}</TableCell>
-                                <TableCell>{line}</TableCell>
+                                <TableCell>{person.id}</TableCell>
+                                <TableCell>{person.time}</TableCell>
+
                             </TableRow>
                         ))}
                     </TableBody>

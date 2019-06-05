@@ -1,7 +1,8 @@
 import React from 'react';
 import AppBar from "../AppBar";
 import Container from "@material-ui/core/Container";
-import QueuesList from "../QueuesList";
+import QueuesContainer from "../QueuesContainer";
+import {queuesSample} from "../mockData";
 
 function Dashboard() {
     return (
@@ -10,7 +11,7 @@ function Dashboard() {
             <Container maxWidth="lg" className={"listTitleContainer"}>
                 <h3>Twoje kolejki:</h3>
             </Container>
-            <QueuesList userType={"stud"}/>
+            <QueuesContainer queues={queuesSample.queues} userType={"stud"}/>
         </React.Fragment>
 
     );
