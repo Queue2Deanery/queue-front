@@ -9,9 +9,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import TableHead from "@material-ui/core/TableHead";
 import {CardActions} from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
-import {Link} from "react-router-dom";
+import QueueCardAction from "./QueueCardAction";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -21,6 +19,10 @@ const useStyles = makeStyles(theme => ({
     },
     cardHeader: {
         backgroundColor: theme.palette.grey[200],
+    },
+    cardContent: {
+        paddingTop: 0,
+        paddingBottom: 0,
     }
 }));
 
@@ -34,8 +36,8 @@ function QueueItem(props) {
                 titleTypographyProps={{align: 'center'}}
                 className={classes.cardHeader}
             />
-            <CardContent>
-                <Table className={classes.table}>
+            <CardContent className={classes.cardContent}>
+                <Table>
                     <colgroup>
                         <col style={{width: '20%'}}/>
                         <col style={{width: '40%'}}/>
@@ -61,15 +63,7 @@ function QueueItem(props) {
                 </Table>
             </CardContent>
             <CardActions>
-                <Grid container justify={"center"}>
-                    {(props.userType === "prac") ?
-                        < Button component={Link} to="/prac/panel"
-                                 color={"primary"} variant={"contained"}>Wybierz</Button>
-                        :
-                        <Button component={Link} to="/stud/signupqueue"
-                                color={"primary"} variant={"contained"}>Zapisz się</Button>
-                    }
-                </Grid>
+                <QueueCardAction userType={props.userType}/>
             </CardActions>
         </Card>
     );

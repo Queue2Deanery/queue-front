@@ -11,7 +11,7 @@ function SelectQueue() {
             <Container maxWidth="lg" className={"listTitleContainer"}>
                 <h3>Twoje kolejki:</h3>
             </Container>
-            <QueuesContainer queues={queuesSample.queues} userType={"prac"}/>
+            <QueuesContainer queues={queuesSample.queues} userType={"dean"}/>
         </React.Fragment>
 
     );
