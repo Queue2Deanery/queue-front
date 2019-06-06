@@ -32,9 +32,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const queue = queuesSample.queues[0];
-const time = queue.people.map(person => parseInt(person.time.slice(0, -3))).reduce((prev, curr) => {
-    return prev + curr
-});
+const time = queue.people[queue.people.length-1].time;
 const issues = issuesTypes.issues;
 
 function SignupQueue() {

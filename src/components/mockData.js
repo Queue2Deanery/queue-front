@@ -3,10 +3,10 @@ const queuesSample =
         queues: [{
             title: "Informatyka",
             people: [
-                {id: 111222, time: "2min"},
-                {id: 112232, time: "5min"},
-                {id: 113242, time: "10min"},
-                {id: 114252, time: "13min"}
+                {id: 111222, time: "2min", issue: "Przedłużenie legitymacji"},
+                {id: 112232, time: "5min", issue: "Złożenie wniosku"},
+                {id: 113242, time: "10min", issue: "Przedłużenie legitymacji"},
+                {id: 114252, time: "13min", issue: "Inna sprawa"}
             ]
         }, {
             title: "Automatyka i Robotyka",
@@ -18,12 +18,12 @@ const queuesSample =
         }, {
             title: "Elektrotechnika",
             people: [
-                {id: 311222, time: "4min"},
-                {id: 322223, time: "7min"},
-                {id: 323224, time: "12min"},
-                {id: 324225, time: "18min"},
-                {id: 325226, time: "20min"},
-                {id: 326227, time: "23min"}
+                {id: 311222, time: "2min", issue: "Przedłużenie legitymacji"},
+                {id: 322223, time: "4min", issue: "Przedłużenie legitymacji"},
+                {id: 323224, time: "6min", issue: "Przedłużenie legitymacji"},
+                {id: 324225, time: "8min", issue: "Przedłużenie legitymacji"},
+                {id: 325226, time: "10min", issue: "Przedłużenie legitymacji"},
+                {id: 326227, time: "12min", issue: "Przedłużenie legitymacji"}
             ]
         }
         ]
