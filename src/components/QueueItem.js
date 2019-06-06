@@ -23,6 +23,10 @@ const useStyles = makeStyles(theme => ({
     cardContent: {
         paddingTop: 0,
         paddingBottom: 0,
+    },
+    waitingCell: {
+        color: "#00cd07",
+        fontSize: 26
     }
 }));
 
@@ -55,8 +59,9 @@ function QueueItem(props) {
                             <TableRow key={index}>
                                 <TableCell>{index + 1}</TableCell>
                                 <TableCell>{person.id}</TableCell>
-                                <TableCell>{person.time}</TableCell>
-
+                                {(props.waiting === index + 1) ?
+                                    (<TableCell className={classes.waitingCell}>{person.time}</TableCell>
+                                    ) : (<TableCell>{person.time}</TableCell>)}
                             </TableRow>
                         ))}
                     </TableBody>

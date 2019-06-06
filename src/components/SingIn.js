@@ -1,12 +1,11 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import AppBar from "./AppBar";
-import {Link} from "react-router-dom";
+import SignInButton from "./SignInButton";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -33,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function SignIn() {
+function SignIn(props) {
     const classes = useStyles();
 
     return (
@@ -67,8 +66,7 @@ function SignIn() {
                             type="password"
                             id="password"
                         />
-                        <Button fullWidth variant="contained" color="primary" className={classes.submit}
-                                component={Link} to="/stud/dashboard"> Zaloguj </Button>
+                        <SignInButton userType={props.userType}/>
                     </form>
                 </div>
             </Container>

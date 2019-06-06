@@ -7,7 +7,7 @@ import {
     SelectQueueWrapper,
     SignInWrapperDean,
     SignInWrapperStud,
-    SignUpQueueWrapper,
+    SignUpQueueWrapper, WaitWrapper,
     WelcomeWrapper
 } from "./components/MuiWrappers";
 
@@ -19,6 +19,7 @@ function App() {
                 <Route exact path="/stud/signin" component={SignInWrapperStud}/>
                 <Route exact path="/stud/dashboard" component={DashboardWrapper}/>
                 <Route exact path="/stud/signupqueue" component={SignUpQueueWrapper}/>
+                <Route exact path="/stud/wait" component={WaitWrapper}/>
                 <Route exact path="/dean/signin" component={SignInWrapperDean}/>
                 <Route exact path="/dean/selectqueue" component={SelectQueueWrapper}/>
                 <Route exact path="/dean/panel" component={MainPanelWrapper}/>

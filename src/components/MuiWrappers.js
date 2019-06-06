@@ -7,6 +7,7 @@ import Dashboard from "./stud/Dashboard";
 import SignIn from "./SingIn";
 import MainPanel from "./dean/MainPanel";
 import SelectQueue from "./dean/SelectQueue";
+import Wait from "./stud/Wait";
 
 
 const studTheme = createMuiTheme({
@@ -36,7 +37,7 @@ function WelcomeWrapper() {
 function SignInWrapperStud() {
     return (
         <MuiThemeProvider theme={studTheme}>
-            <SignIn/>
+            <SignIn userType={"stud"}/>
         </MuiThemeProvider>
     );
 }
@@ -57,10 +58,18 @@ function SignUpQueueWrapper() {
     );
 }
 
+function WaitWrapper() {
+    return (
+        <MuiThemeProvider theme={studTheme}>
+            <Wait/>
+        </MuiThemeProvider>
+    );
+}
+
 function SignInWrapperDean() {
     return (
         <MuiThemeProvider theme={deanTheme}>
-            <SignIn/>
+            <SignIn userType={"dean"}/>
         </MuiThemeProvider>
     );
 }
@@ -82,6 +91,6 @@ function MainPanelWrapper() {
 }
 
 export {
-    WelcomeWrapper, SignInWrapperStud, DashboardWrapper, SignUpQueueWrapper,
+    WelcomeWrapper, SignInWrapperStud, DashboardWrapper, SignUpQueueWrapper, WaitWrapper,
     SignInWrapperDean, SelectQueueWrapper, MainPanelWrapper
 };
