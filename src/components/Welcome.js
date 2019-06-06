@@ -7,7 +7,7 @@ import {queuesSample} from "./mockData"
 function Welcome() {
     return (
         <React.Fragment>
-            <AppBar/>
+            <AppBar userType={"stud"}/>
             <Container maxWidth="lg" className={"listTitleContainer"}>
                 <h3>Aktywne kolejki do dziekanatu:</h3>
             </Container>

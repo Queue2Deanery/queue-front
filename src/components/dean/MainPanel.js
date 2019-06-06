@@ -123,7 +123,7 @@ function QueueTable() {
 function MainPanel() {
     return (
         <React.Fragment>
-            <AppBar login={loginMock}/>
+            <AppBar login={loginMock} userType={"dean"}/>
             <Container maxWidth="lg">
                 <h3>Infomatyka</h3>
                 <Grid container spacing={5}>

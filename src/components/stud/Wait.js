@@ -7,7 +7,7 @@ import {loginMock, queuesSample} from "../mockData";
 function Wait() {
     return (
         <React.Fragment>
-            <AppBar login={loginMock}/>
+            <AppBar login={loginMock} userType={"stud"}/>
             <Container maxWidth="lg" className={"listTitleContainer"}>
                 <h3>Twoje kolejki:</h3>
                 <QueueItem queue={queuesSample.queues[0]} waiting={2} action={"studResign"}/>

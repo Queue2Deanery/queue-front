@@ -3,9 +3,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import {Link} from "react-router-dom";
-import Button from "@material-ui/core/Button";
-import {Grid} from "@material-ui/core";
+import AppBarLogin from "./AppBarLogin";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -26,28 +24,10 @@ function QueueAppBar(props) {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    {/*<IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu">*/}
-                    {/*    <MenuIcon/>*/}
-                    {/*</IconButton>*/}
                     <Typography variant="h6" className={classes.title}>
                         Kolejka do dziekanatu
                     </Typography>
-                    {props.login ? (
-                        <Grid container justify={"flex-end"} alignItems={"center"} spacing={5}>
-                            <Grid item>
-                                Zalogowany jako {props.login}
-                            </Grid>
-                            <Grid item>
-                                <Button component={Link} to="/stud/welcome" variant="outlined" color="secondary">
-                                    Wyloguj
-                                </Button>
-                            </Grid>
-                        </Grid>
-                    ) : (
-                        <Button component={Link} to="/stud/signin" variant="outlined" color="secondary">
-                            Zaloguj
-                        </Button>
-                    )}
+                    <AppBarLogin {...props}/>
                 </Toolbar>
             </AppBar>
         </div>

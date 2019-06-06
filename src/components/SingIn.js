@@ -37,7 +37,7 @@ function SignIn(props) {
 
     return (
         <React.Fragment>
-            <AppBar/>
+            <AppBar userType={props.userType}/>
             <Container component="main" maxWidth="xs">
                 <CssBaseline/>
                 <div className={classes.paper}>

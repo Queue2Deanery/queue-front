@@ -7,7 +7,7 @@ import {loginMock, queuesSample} from "../mockData";
 function SelectQueue() {
     return (
         <React.Fragment>
-            <AppBar login={loginMock}/>
+            <AppBar login={loginMock} userType={"dean"}/>
             <Container maxWidth="lg" className={"listTitleContainer"}>
                 <h3>Twoje kolejki:</h3>
             </Container>

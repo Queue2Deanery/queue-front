@@ -41,7 +41,7 @@ function SignupQueue() {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <AppBar login={loginMock}/>
+            <AppBar login={loginMock} userType={"stud"}/>
             <Container maxWidth="lg">
                 <h3 className={classes.listTitleContainer}>Zapisz się do kolejki:</h3>
                 <Card>
