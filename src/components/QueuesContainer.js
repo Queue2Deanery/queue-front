@@ -2,10 +2,8 @@ import React from 'react';
 import {Grid} from "@material-ui/core";
 import QueueItem from "./QueueItem";
 import Container from "@material-ui/core/Container";
-import "./styles.css";
 
 function QueuesContainer(props) {
-    console.log(props.queues);
     return (
         <Container maxWidth="lg" component="main">
             <Grid container spacing={10} justify={"space-evenly"}>

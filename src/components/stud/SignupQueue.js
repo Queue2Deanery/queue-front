@@ -9,8 +9,8 @@ import Grid from "@material-ui/core/Grid/index";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import IssuePicker from "./IssuePicker";
-import "../styles.css";
 import {Link} from "react-router-dom";
+import {issuesTypes, queuesSample} from "../mockData";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -20,14 +20,20 @@ const useStyles = makeStyles(theme => ({
     },
     cardHeader: {
         backgroundColor: theme.palette.grey[200],
+    },
+    listTitleContainer: {
+        paddingTop: 50,
+        paddingBottom: 48
+    },
+    gridContainer: {
+        paddingTop: 30,
+        paddingBottom: 30
     }
 }));
 
-const tier =
-    {
-        title: 'Informatyka',
-        queueList: ['3min', '7min', '8min', '8min']
-    };
+const queue = queuesSample.queues[0];
+const time = queue.people.map(person => parseInt(person.time.slice(0,-3))).reduce((prev,curr) => {return prev+curr});
+const issues = issuesTypes.issues;
 
 function SignupQueue() {
     const classes = useStyles();
@@ -35,29 +41,29 @@ function SignupQueue() {
         <React.Fragment>
             <AppBar/>
             <Container maxWidth="lg">
-                <h3 className={"listTitleContainer"}>Zapisz się do kolejki:</h3>
+                <h3 className={classes.listTitleContainer}>Zapisz się do kolejki:</h3>
                 <Card>
                     <CardHeader
-                        title={tier.title}
+                        title={queue.title}
                         titleTypographyProps={{align: 'center'}}
                         subheaderTypographyProps={{align: 'center'}}
                         className={classes.cardHeader}
                     />
                     <CardContent>
-                        <Grid container className={'singupqueue'}>
+                        <Grid container className={classes.gridContainer} alignItems={"center"}>
                             <Grid item xs={12} sm={3}>
                                 Typ sprawy:
                             </Grid>
                             <Grid item xs={12} sm={9}>
-                                <IssuePicker/>
+                                <IssuePicker issues={issues}/>
                             </Grid>
                         </Grid>
-                        <Grid container className={'singupqueue'}>
+                        <Grid container className={classes.gridContainer} alignItems={"center"}>
                             <Grid item xs={12} sm={3}>
                                 Czas oczekiwania:
                             </Grid>
                             <Grid item xs={12} sm={9}>
-                                <h3>133min</h3>
+                                <h3>{time}</h3>
                             </Grid>
                         </Grid>
                     </CardContent>
