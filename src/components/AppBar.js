@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import {Link} from "react-router-dom";
 import Button from "@material-ui/core/Button";
+import {Grid} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -15,10 +16,11 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         flexGrow: 1,
+        minWidth: 300
     },
 }));
 
-function StudentAppBar() {
+function QueueAppBar(props) {
     const classes = useStyles();
     return (
         <div className={classes.root}>
@@ -30,13 +32,26 @@ function StudentAppBar() {
                     <Typography variant="h6" className={classes.title}>
                         Kolejka do dziekanatu
                     </Typography>
-                    <Button component={Link} to="/stud/signin" variant="contained" color="primary">
-                        Zaloguj
-                    </Button>
+                    {props.login ? (
+                        <Grid container justify={"flex-end"} alignItems={"center"} spacing={5}>
+                            <Grid item>
+                                Zalogowany jako {props.login}
+                            </Grid>
+                            <Grid item>
+                                <Button component={Link} to="/stud/welcome" variant="outlined" color="secondary">
+                                    Wyloguj
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    ) : (
+                        <Button component={Link} to="/stud/signin" variant="outlined" color="secondary">
+                            Zaloguj
+                        </Button>
+                    )}
                 </Toolbar>
             </AppBar>
         </div>
     );
 }
 
-export default StudentAppBar;
+export default QueueAppBar;

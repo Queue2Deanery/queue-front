@@ -9,7 +9,7 @@ function QueuesContainer(props) {
             <Grid container spacing={10} justify={"space-evenly"}>
                 {props.queues.map((queue) => (
                     <Grid item xs={12} md={6} lg={4}>
-                        <QueueItem queue={queue} userType={props.userType}/>
+                        <QueueItem queue={queue} action={props.action}/>
                     </Grid>))}
             </Grid>
         </Container>

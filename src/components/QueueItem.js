@@ -68,7 +68,7 @@ function QueueItem(props) {
                 </Table>
             </CardContent>
             <CardActions>
-                <QueueCardAction userType={props.userType}/>
+                <QueueCardAction action={props.action}/>
             </CardActions>
         </Card>
     );

@@ -10,7 +10,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import IssuePicker from "./IssuePicker";
 import {Link} from "react-router-dom";
-import {issuesTypes, queuesSample} from "../mockData";
+import {issuesTypes, loginMock, queuesSample} from "../mockData";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -41,7 +41,7 @@ function SignupQueue() {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <AppBar/>
+            <AppBar login={loginMock}/>
             <Container maxWidth="lg">
                 <h3 className={classes.listTitleContainer}>Zapisz się do kolejki:</h3>
                 <Card>

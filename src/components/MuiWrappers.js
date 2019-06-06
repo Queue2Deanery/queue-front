@@ -12,8 +12,8 @@ import Wait from "./stud/Wait";
 
 const studTheme = createMuiTheme({
     palette: {
-        primary: {main: '#2535f3'},
-        secondary: {main: '#7984fa'}
+        primary: {main: '#1f2bb8'},
+        secondary: {main: '#dfeafa'}
 
     }
 });
@@ -21,7 +21,7 @@ const studTheme = createMuiTheme({
 const deanTheme = createMuiTheme({
     palette: {
         primary: {main: '#19a719'},
-        secondary: {main: '#7984fa'}
+        secondary: {main: '#e8fae3'}
 
     }
 });

@@ -10,6 +10,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {Paper} from "@material-ui/core";
+import {loginMock} from "../mockData";
 
 const paperStyle = {
     "padding": "15px",
@@ -122,7 +123,7 @@ function QueueTable() {
 function MainPanel() {
     return (
         <React.Fragment>
-            <AppBar/>
+            <AppBar login={loginMock}/>
             <Container maxWidth="lg">
                 <h3>Infomatyka</h3>
                 <Grid container spacing={5}>

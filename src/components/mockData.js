@@ -41,4 +41,6 @@ const issuesTypes =
         ]
     };
 
-export {queuesSample, issuesTypes};
+const loginMock = 228123;
+
+export {queuesSample, issuesTypes, loginMock};
