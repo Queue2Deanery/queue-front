@@ -3,11 +3,10 @@ import AppBar from "../AppBar";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
-import {loginMock, queuesSample} from "../mockData";
+import {loginDeanMock, queuesSample} from "../mockData";
 import UserData from "./panelComponents/UserData";
 import QueueControl from "./panelComponents/QueueControl";
 import QueueTable from "./panelComponents/QueueTable";
-
 
 
 const nextButtonStyle = {
@@ -20,7 +19,7 @@ const queue = queuesSample.queues[0];
 function MainPanel() {
     return (
         <React.Fragment>
-            <AppBar login={loginMock} userType={"dean"}/>
+            <AppBar login={loginDeanMock} userType={"dean"}/>
             <Container maxWidth="lg">
                 <h3>{queue.title}</h3>
                 <Grid container spacing={5}>

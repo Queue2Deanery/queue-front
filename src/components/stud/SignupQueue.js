@@ -10,7 +10,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import IssuePicker from "./IssuePicker";
 import {Link} from "react-router-dom";
-import {issuesTypes, loginMock, queuesSample} from "../mockData";
+import {issuesTypes, loginStudMock, queuesSample} from "../mockData";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -32,14 +32,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const queue = queuesSample.queues[0];
-const time = queue.people[queue.people.length-1].time;
 const issues = issuesTypes.issues;
 
 function SignupQueue() {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <AppBar login={loginMock} userType={"stud"}/>
+            <AppBar login={loginStudMock} userType={"stud"}/>
             <Container maxWidth="lg">
                 <h3 className={classes.listTitleContainer}>Zapisz się do kolejki:</h3>
                 <Card>
@@ -63,7 +62,7 @@ function SignupQueue() {
                                 Czas oczekiwania:
                             </Grid>
                             <Grid item xs={12} sm={9}>
-                                <h3>{time}</h3>
+                                <h3>15 min</h3>
                             </Grid>
                         </Grid>
                     </CardContent>

@@ -2,16 +2,16 @@ import React from 'react';
 import AppBar from "../AppBar";
 import Container from "@material-ui/core/Container/index";
 import QueuesContainer from "../QueuesContainer";
-import {loginMock, queuesSample} from "../mockData";
+import {loginDeanMock, deanSelect} from "../mockData";
 
 function SelectQueue() {
     return (
         <React.Fragment>
-            <AppBar login={loginMock} userType={"dean"}/>
+            <AppBar login={loginDeanMock} userType={"dean"}/>
             <Container maxWidth="lg" className={"listTitleContainer"}>
                 <h3>Twoje kolejki:</h3>
             </Container>
-            <QueuesContainer queues={queuesSample.queues} action={"deanSelect"}/>
+            <QueuesContainer queues={deanSelect.queues} action={"deanSelect"}/>
         </React.Fragment>
 
     );
