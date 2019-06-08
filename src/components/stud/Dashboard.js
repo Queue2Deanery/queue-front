@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from "../AppBar";
 import Container from "@material-ui/core/Container";
 import QueuesContainer from "../QueuesContainer";
-import {loginStudMock, queuesInf} from "../mockData";
+import {loginStudMock, queuesInf} from "../../utils/mockData";
 
 
 function Dashboard() {

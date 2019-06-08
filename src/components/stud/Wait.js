@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from "../AppBar";
 import Container from "@material-ui/core/Container";
 import QueueItem from "../QueueItem";
-import {loginStudMock, queuesInfWait} from "../mockData";
+import {loginStudMock, queuesInfWait} from "../../utils/mockData";
 
 function Wait() {
     return (

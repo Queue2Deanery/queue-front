@@ -1,12 +1,12 @@
 import React from 'react';
-import AppBar from "../AppBar";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import {loginDeanMock, queuesSample} from "../mockData";
-import UserData from "./panelComponents/UserData";
-import QueueControl from "./panelComponents/QueueControl";
-import QueueTable from "./panelComponents/QueueTable";
+import AppBar from "../../AppBar";
+import Container from "@material-ui/core/Container/index";
+import Grid from "@material-ui/core/Grid/index";
+import Button from "@material-ui/core/Button/index";
+import {loginDeanMock, queuesSample} from "../../../utils/mockData";
+import UserData from "./UserData";
+import QueueControl from "./QueueControl";
+import QueueTable from "./QueueTable";
 
 
 const nextButtonStyle = {

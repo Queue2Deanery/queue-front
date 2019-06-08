@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from "../AppBar";
 import Container from "@material-ui/core/Container/index";
 import QueuesContainer from "../QueuesContainer";
-import {loginDeanMock, deanSelect} from "../mockData";
+import {loginDeanMock, deanSelect} from "../../utils/mockData";
 
 function SelectQueue() {
     return (

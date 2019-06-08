@@ -5,7 +5,7 @@ import React from "react";
 import SignupQueue from "./stud/SignupQueue";
 import Dashboard from "./stud/Dashboard";
 import SignIn from "./SingIn";
-import MainPanel from "./dean/MainPanel";
+import MainPanel from "./dean/MainPanel/MainPanel";
 import SelectQueue from "./dean/SelectQueue";
 import Wait from "./stud/Wait";
 

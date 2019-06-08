@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from "./AppBar";
 import QueuesContainer from "./QueuesContainer";
 import Container from "@material-ui/core/Container";
-import {queuesSample} from "./mockData"
+import {queuesSample} from "../utils/mockData"
 
 function Welcome() {
     return (

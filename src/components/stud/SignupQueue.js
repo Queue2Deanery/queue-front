@@ -10,7 +10,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import IssuePicker from "./IssuePicker";
 import {Link} from "react-router-dom";
-import {issuesTypes, loginStudMock, queuesSample} from "../mockData";
+import {issuesTypes, loginStudMock, queuesSample} from "../../utils/mockData";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
