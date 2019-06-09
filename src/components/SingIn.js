@@ -6,6 +6,8 @@ import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import AppBar from "./AppBar";
 import SignInButton from "./SignInButton";
+import {login} from "../utils/auth";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -32,9 +34,14 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function SignIn(props) {
-    const classes = useStyles();
 
+function SignIn(props) {
+    let info = {
+        "ipAddress": "192.168.0.101",
+        "password": "test",
+        "userIndex": "289112"
+    };
+    const classes = useStyles();
     return (
         <React.Fragment>
             <AppBar userType={props.userType}/>
@@ -66,6 +73,7 @@ function SignIn(props) {
                             type="password"
                             id="password"
                         />
+                        <Button onClick={() => login(info)}>TESTLOGIN</Button>
                         <SignInButton userType={props.userType}/>
                     </form>
                 </div>
