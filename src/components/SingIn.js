@@ -36,11 +36,6 @@ const useStyles = makeStyles(theme => ({
 
 
 function SignIn(props) {
-    let info = {
-        "ipAddress": "192.168.0.101",
-        "password": "test",
-        "userIndex": "289112"
-    };
     const classes = useStyles();
     return (
         <React.Fragment>
@@ -73,7 +68,7 @@ function SignIn(props) {
                             type="password"
                             id="password"
                         />
-                        <Button onClick={() => login(info)}>TESTLOGIN</Button>
+                        <Button onClick={() => login()}>TESTLOGIN</Button>
                         <SignInButton userType={props.userType}/>
                     </form>
                 </div>
